@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 Gravity Health - Next-Gen Appointment System
 
-## Getting Started
+![Gravity Health Banner](public/demo.webp)
 
-First, run the development server:
+<div align="center">
+
+**Modern. Fast. Frictionless.**
+<br>
+*A state-of-the-art hospital appointment system built with the "Vibe Coding" philosophy.*
+
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+
+</div>
+
+---
+
+## 🎓 Academic Project Info
+
+This project was developed as part of the **Yazılım Gerçekleme ve Test** (Software Implementation and Testing) course.
+
+| Role | Name |
+| :--- | :--- |
+| **Student** | **Yahya Özden** |
+| **Course** | Yazılım Gerçekleme ve Test |
+| **Instructors** | **Nurettin Şenyer**, **Ömer Durmuş** |
+
+---
+
+## 🌟 Project Overview
+
+**Gravity Health** is not just another appointment booking app. It is a reimagining of how healthcare interfaces should feel. Moving away from sterile, clunky enterprise software, Gravity Health introduces a **"Glassmorphism"** aesthetic, **Aurora** background animations, and fluid micro-interactions to create a user experience that is both calming and efficient.
+
+### Key Features
+
+- **🌌 Aurora UI**: A dynamic, living background that shifts gently, providing a modern and premium feel.
+- **💎 Glassmorphism Design**: Translucent cards with background blur filters (`backdrop-filter`) creating depth and hierarchy.
+- **⚡ Zero-Friction Booking**: A streamlined, multi-step wizard that guides patients from specialty selection to confirmation in seconds.
+- **📱 Responsive & Adaptive**: Flawless experience across all devices, from large desktop monitors to mobile phones.
+- **✨ Micro-Interactions**: Subtle hover effects, smooth page transitions, and interactive elements that respond to user input instantly.
+
+## 🛠️ Technology Stack
+
+- **Frontend Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling Engine**: [Tailwind CSS](https://tailwindcss.com/) + Custom CSS Modules
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) for complex transitions.
+- **Database**: [Prisma](https://www.prisma.io/) with SQLite (Development) / PostgreSQL (Production Ready).
+- **Language**: TypeScript for type safety and robust code.
+- **Icons**: [Lucide React](https://lucide.dev/) for clean, consistent iconography.
+
+## 🚀 Installation & Setup
+
+Follow these steps to get the project running on your local machine.
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Steps
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/yourusername/gravity-health.git
+    cd gravity-health
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Initialize Database**
+    This project uses Prisma with a local SQLite database for ease of setup.
+    ```bash
+    npx prisma generate
+    npx prisma db push
+    ```
+
+4.  **Start Development Server**
+    ```bash
+    npm run dev
+    ```
+
+5.  **Launch**
+    Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+gravity-health/
+├── app/                  # Next.js App Router pages
+│   ├── globals.css       # Global styles & Aurora animations
+│   ├── layout.tsx        # Main layout wrapper
+│   └── page.tsx          # Landing page
+├── components/           # Reusable UI Components
+│   ├── BookingWizard.tsx # Core booking logic & UI
+│   └── ui/               # Atomic UI elements (Buttons, Cards)
+├── prisma/               # Database Schema & Seeds
+├── public/               # Static Assets (Images, Demo Video)
+└── scripts/              # Utility scripts (Audio generation, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎥 Demo & Media
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Browser Recording**: The walkthrough recording is available as an animated WebP file. You can find the original recording at:
+  - Path: `C:\Users\Johan\.gemini\antigravity\brain\b98f8ef0-1d27-40ce-9f41-c143f1ae4608\gravity_health_demo_1763837637690.webp`
+  - This file can be opened in modern browsers (Chrome, Edge) or converted to MP4 using online tools.
+- **Voice-over Audio**: A generated voice-over track is available at `public/demo_voiceover.mp3`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+<div align="center">
 
-To learn more about Next.js, take a look at the following resources:
+*Designed & Developed by Yahya Özden*
+<br>
+*2025*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</div>

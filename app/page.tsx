@@ -1,65 +1,71 @@
-import Image from "next/image";
+'use client'
+
+import { motion } from 'framer-motion'
+import { ArrowRight, Calendar, Stethoscope, Activity } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-black text-white selection:bg-purple-500/30 relative">
+      {/* Aurora Background */}
+      <div className="fixed inset-0 aurora-bg z-0 pointer-events-none" />
+
+      {/* Hero Section */}
+      <section className="relative flex flex-col items-center justify-center min-h-[90vh] overflow-hidden z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-center px-4 max-w-4xl mx-auto"
+        >
+          <div className="inline-block mb-4 px-4 py-1.5 rounded-full glass text-sm font-medium text-purple-300 border-purple-500/30">
+            ✨ The Future of Healthcare
+          </div>
+          <h1 className="text-7xl md:text-9xl font-bold tracking-tighter mb-8">
+            Gravity <span className="text-gradient">Health</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Experience healthcare without friction. Zero waiting. Zero gravity.
+            <br />Just pure, seamless care.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <Link href="/book">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative px-10 py-5 bg-white text-black rounded-full font-bold text-xl flex items-center gap-3 mx-auto overflow-hidden shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-shadow"
+            >
+              <span className="relative z-10">Book Appointment</span>
+              <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-200 to-blue-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </motion.button>
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-32 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+        {[
+          { icon: Calendar, title: "Instant Booking", desc: "No waiting on hold. Book in seconds." },
+          { icon: Stethoscope, title: "Top Specialists", desc: "Access to world-class doctors." },
+          { icon: Activity, title: "Real-time Tracking", desc: "Track your health journey live." },
+        ].map((feature, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.2, duration: 0.8 }}
+            className="p-10 rounded-3xl glass glass-hover group"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <feature.icon className="w-7 h-7 text-purple-400" />
+            </div>
+            <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+            <p className="text-gray-400 leading-relaxed">{feature.desc}</p>
+          </motion.div>
+        ))}
+      </section>
+    </main>
+  )
 }

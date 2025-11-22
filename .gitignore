@@ -39,3 +39,32 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Temporary files
+temp_frames/
+temp_video.mp4
+
+# Local Python packages
+PIL/
+numpy/
+moviepy/
+imageio/
+imageio_ffmpeg/
+colorama/
+decorator.py
+dotenv/
+proglog/
+tqdm/
+bin/
+lib/
+*.dist-info/
+numpy.libs/
