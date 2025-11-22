@@ -13,6 +13,17 @@
 [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
+---
+
+### 🎬 Proje Tanıtımı
+
+<div align="center">
+
+[![YouTube Demo](https://img.shields.io/badge/YouTube-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/yM7_qITQ5f0)
+[![LinkedIn Post](https://img.shields.io/badge/LinkedIn-Paylaşım-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/yahya-%C3%B6zden-806319359_webdevelopment-nextjs-typescript-share-7398092248640450560-UQMN)
+
+**📺 [Demo Videoyu İzle](https://youtu.be/yM7_qITQ5f0)** | **💼 [LinkedIn'de Paylaş](https://www.linkedin.com/posts/yahya-%C3%B6zden-806319359_webdevelopment-nextjs-typescript-share-7398092248640450560-UQMN)**
+
 </div>
 
 ---
